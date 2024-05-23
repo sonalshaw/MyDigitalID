@@ -13,6 +13,7 @@ body {
     width: 20%;
     aspect-ratio: 1/1.35;
     perspective: 1000px;
+    user-select: none;
 }
 
 .card-front, .card-back {
@@ -20,7 +21,7 @@ body {
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
     align-items: center;
     font-size: 24px;
@@ -30,14 +31,18 @@ body {
 }
 
 .card-front {
-    background-color: purple;
-    border: 4px solid lightpink;
+    background-color: darkcyan;
+    border: 4px solid cyan;
 }
 
 .card-back {
-    background-color: darkblue;
-    border: 4px solid blue;
+    background-color: darkkhaki;
+    border: 4px solid yellow;
     transform: rotateY(180deg);
+}
+
+.card:hover {
+    cursor: none;
 }
 
 .card:hover .card-front {
@@ -46,4 +51,46 @@ body {
 
 .card:hover .card-back {
     transform: rotateY(0deg);
+}
+
+.front-division {
+    /*border: 2px solid white;*/
+    margin: auto;
+    width: 90%;
+    display: flex;
+}
+
+#front-upper-division {
+    height: 77%;
+}
+
+#front-lower-division {
+    height: 17%;
+}
+
+.image-container {
+    border: 5px solid white;
+    border-radius: 10px;
+    background-color: black;
+    height: 60%;
+    width: 60%;
+    margin: auto;
+}
+
+.image-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: 9px;
+}
+
+.text-container {
+    border: 5px solid white;
+    border-radius: 10px;
+    background-color: black;
+    margin: auto;
+    height: 50%;
+    width: 80%;
+    color: white;
+    text-align: center;
+    font-size: 120%;
 }
